@@ -38,4 +38,6 @@ jobs:
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DB_CONNECTION: mysql
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+
       run: vendor/bin/phpunit
