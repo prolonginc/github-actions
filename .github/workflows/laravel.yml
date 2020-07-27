@@ -11,10 +11,12 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           path: main
-    - name: Get Composer Cache Directory
+
+      - name: Get Composer Cache Directory
       id: composer-cache
       run: |
         echo "::set-output name=dir::$(composer config cache-files-dir)"
