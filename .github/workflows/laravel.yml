@@ -29,5 +29,5 @@ jobs:
 #     - run: ./vendor/bin/phpunit
     - name: Run Laravel Server
       run: |
-        nohup bash -c 'php artisan serve --port=80 &'
+        nohup bash -c 'php artisan serve --port=80 '
         curl http://localhost
