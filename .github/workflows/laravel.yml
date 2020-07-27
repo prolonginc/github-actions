@@ -28,6 +28,6 @@ jobs:
 #         DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 #     - run: ./vendor/bin/phpunit
     - name: Run Laravel Server
-      run: php artisan serve --port=80 > /dev/null 2>&1 &
-    - name: testing curl
-      run: curl http://localhost
+      run: |
+        nohup bash -c 'php artisan serve --port=80 > /dev/null 2>&1 &'
+        curl http://localhost
