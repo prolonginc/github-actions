@@ -12,7 +12,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Copy .env
+    - name: Get Composer Cache Directory
+      id: composer-cache
+      run: |
+        echo "::set-output name=dir::$(composer config cache-files-dir)"
+    - uses: actions/cache@v2
+      with:
+        path: ${{ steps.composer-cache.outputs.dir }}
+        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-composer-
+
+          - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
@@ -30,5 +41,5 @@ jobs:
     - name: Run Laravel Server
       run: |
         sudo php artisan serve --port=80 &
-        sleep 20 &&
+        sleep 2 &&
         sudo curl http://localhost
