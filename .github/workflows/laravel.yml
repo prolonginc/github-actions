@@ -30,4 +30,5 @@ jobs:
     - name: Run Laravel Server
       run: |
         sudo php artisan serve --port=80 &
-        curl http://localhost
+        sleep 20 &&
+        sudo curl http://localhost
