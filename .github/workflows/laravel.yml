@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        path: 'main'
+        path: main
     - name: Get Composer Cache Directory
       id: composer-cache
       run: |
