@@ -30,4 +30,4 @@ jobs:
     - name: Run Laravel Server
       run: php artisan serve --port=80 > /dev/null 2>&1 &
     - name: testing curl
-      run: curl http://localhost:8000
+      run: curl http://localhost
