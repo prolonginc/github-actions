@@ -15,8 +15,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: main
+
       - name: change directory
-        -run: cd main
+        run: cd main
       - name: Get Composer Cache Directory
         id: composer-cache
         run: |
