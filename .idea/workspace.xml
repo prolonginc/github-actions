@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cff862cf-4285-498e-885b-c0471022f79d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/laravel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/laravel.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +164,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595256059564</updated>
       <workItem from="1595256061298" duration="1478000" />
-      <workItem from="1595858406302" duration="2512000" />
+      <workItem from="1595858406302" duration="2794000" />
     </task>
     <servers />
   </component>
